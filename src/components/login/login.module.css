@@ -1,0 +1,26 @@
+@value makerGreen, makerWhite from '../../common/colors.css';
+
+.login {
+	width: 30rem;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: makerWhite;
+}
+
+.list {
+	list-style: none;
+}
+
+.logInButton {
+	height: 2.5em;
+	font-size: 1.2rem;
+	border: 0.12em solid makerGreen;
+	border-radius: 2rem;
+	padding: 0.8rem 10rem;
+	outline: 0;
+	cursor: pointer;
+	background-color: transparent;
+	margin-bottom: 1rem;
+}
