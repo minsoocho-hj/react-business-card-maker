@@ -8,7 +8,7 @@ class Authservice {
 	}
 
 	logout() {
-		return firebaseApp.auth().signOut();
+		firebase.auth().signOut();
 	}
 
 	onAuthChange(onUserChanged) {
