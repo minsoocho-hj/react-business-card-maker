@@ -1,0 +1,20 @@
+@value makerWhite, makerGreen from '../../common/colors.css';
+@value mediaQuery from '../../common/size.css';
+
+.form {
+	width: 50%;
+	height: 100%;
+	background-color: makerWhite;
+	text-align: center;
+}
+
+.title {
+	color: makerGreen;
+	font-weight: 800;
+}
+
+@media (max-width: mediaQuery) {
+	.form {
+		width: 100%;
+	}
+}

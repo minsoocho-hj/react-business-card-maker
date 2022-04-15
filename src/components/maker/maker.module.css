@@ -1,0 +1,15 @@
+@value mediaQuery from '../../common/size.css';
+
+.maker {
+	width: 80%;
+}
+.content {
+	display: flex;
+	flex-direction: row;
+}
+
+@media (max-width: mediaQuery) {
+	.content {
+		flex-direction: column;
+	}
+}
