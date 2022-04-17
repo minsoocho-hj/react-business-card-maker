@@ -2,10 +2,12 @@
 
 .maker {
 	width: 80%;
-}
-.content {
+	height: 80%;
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
+}
+.container {
+	height: 100%;
 }
 
 @media (max-width: mediaQuery) {

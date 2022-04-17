@@ -25,7 +25,7 @@ const Maker = ({ authService }) => {
 	return (
 		<section className={styles.maker}>
 			<Header onLogout={onLogout} />
-			<div className={styles.content}>
+			<div className={styles.cotainer}>
 				<CardForm />
 				<Preview />
 			</div>
