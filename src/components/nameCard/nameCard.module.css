@@ -1,0 +1,11 @@
+.card {
+	display: flex;
+	width: 90%;
+	padding: 1rem 2rem;
+	border: 1px solid black;
+}
+
+.img {
+	width: 30%;
+	height: 100%;
+}

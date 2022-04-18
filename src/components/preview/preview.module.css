@@ -6,6 +6,7 @@
 	height: 100%;
 	background-color: makerWhite;
 	text-align: center;
+	overflow: scroll;
 }
 
 .title {

@@ -2,11 +2,13 @@
 
 .maker {
 	width: 80%;
-	height: 80%;
+	height: 60%;
 	display: flex;
 	flex-direction: column;
 }
 .container {
+	display: flex;
+	flex-direction: row;
 	height: 100%;
 }
 
