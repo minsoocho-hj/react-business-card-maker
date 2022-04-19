@@ -8,12 +8,12 @@
 }
 .container {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	height: 100%;
 }
 
-@media (max-width: mediaQuery) {
-	.content {
-		flex-direction: column;
+@media (min-width: mediaQuery) {
+	.container {
+		flex-direction: row;
 	}
 }
