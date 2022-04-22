@@ -1,12 +1,75 @@
+@value makerBlack, makerLightGrey, makerLightPink, makerGreen, makerWhite, makerWheat, makerShadow from '../../common/colors.css';
+
 .card {
 	display: flex;
+	align-items: center;
 	width: 90%;
-	padding: 1rem 2rem;
-	border: 1px solid black;
+	height: 12rem;
+	padding: 1.5rem;
+	background-color: makerLightPink;
+	box-shadow: 6px 6px 8px 0 makerShadow;
+	border-radius: 1rem;
+	margin-left: 0;
+	margin-bottom: 2rem;
 }
 
-.img {
-	width: 30%;
-	height: 100%;
-	margin-right: 3rem;
+.card.dark {
+	background-color: makerBlack;
+	color: makerWhite;
+}
+
+.card.light {
+	background-color: makerWhite;
+	color: makerBlack;
+}
+
+.card.pink {
+	background-color: makerLightPink;
+	color: makerBlack;
+}
+.card:hover {
+	opacity: 0.8;
+}
+
+.card:last-child {
+	margin-bottom: 0;
+}
+
+.info {
+	width: 100%;
+}
+
+.avatar {
+	width: 8rem;
+	height: 8rem;
+	margin-right: 2rem;
+}
+
+.info {
+	text-align: left;
+	width: 100%;
+	padding: 2rem 0;
+}
+
+.name,
+.company,
+.title,
+.email,
+.message,
+.theme {
+	margin: 0 0 0.4rem 0;
+	font-size: 0.9rem;
+}
+
+.name {
+	font-size: 1.2rem;
+}
+
+.company::after {
+	content: '';
+	display: block;
+	width: 90%;
+	height: 1px;
+	background-color: makerWheat;
+	margin-top: 0.8rem;
 }

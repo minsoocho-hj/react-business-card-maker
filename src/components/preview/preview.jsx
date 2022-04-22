@@ -7,7 +7,7 @@ const Preview = ({ cards }) => (
 		<h1 className={styles.title}>Card preview</h1>
 		<ul className={styles.nameCardList}>
 			{cards.map((card) => (
-				<NameCard card={card} />
+				<NameCard card={card} key={card.id} />
 			))}
 		</ul>
 	</section>
