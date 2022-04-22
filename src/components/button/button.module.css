@@ -1,0 +1,13 @@
+@value makerGreen, makerWhite from '../../common/colors.css';
+.btn_submit {
+	color: makerWhite;
+	background-color: makerGreen;
+	width: 100%;
+	padding: 0.5rem;
+	font-size: 0.8rem;
+}
+
+.btn_submit:hover {
+	opacity: 0.8;
+	cursor: pointer;
+}

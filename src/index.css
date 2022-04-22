@@ -16,3 +16,12 @@ code {
 input {
 	all: unset;
 }
+
+li {
+	list-style: none;
+}
+
+button {
+	outline: none;
+	border: none;
+}

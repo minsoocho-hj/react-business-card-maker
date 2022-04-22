@@ -6,9 +6,11 @@ const CardForm = ({ cards, updateCard }) => {
 	return (
 		<section className={styles.form}>
 			<h1 className={styles.title}>Card form</h1>
-			{cards.map((card) => (
-				<CardEditForm card={card} updateCard={updateCard} />
-			))}
+			<ul className={styles.editors}>
+				{cards.map((card) => (
+					<CardEditForm card={card} updateCard={updateCard} key={card.id} />
+				))}
+			</ul>
 		</section>
 	);
 };
