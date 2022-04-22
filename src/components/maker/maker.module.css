@@ -1,10 +1,11 @@
 @value mediaQuery from '../../common/size.css';
-
+@value makerWhite from '../../common/colors.css';
 .maker {
 	width: 80%;
 	height: 60%;
 	display: flex;
 	flex-direction: column;
+	background-color: makerWhite;
 }
 .container {
 	display: flex;
