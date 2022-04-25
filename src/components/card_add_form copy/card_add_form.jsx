@@ -12,9 +12,7 @@ const CardAddForm = () => {
 	const emailRef = useRef();
 	const messageRef = useRef();
 
-	const onSubmit = () => {
-		console.log('onSubmit');
-	};
+	const onSubmit = () => {};
 	return (
 		<form action='' className={styles.form}>
 			<input
