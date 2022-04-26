@@ -7,7 +7,7 @@
 	padding: 0 2rem;
 	background-color: makerWhite;
 	text-align: center;
-	overflow: scroll;
+	overflow-y: auto;
 }
 
 .nameCardList {
