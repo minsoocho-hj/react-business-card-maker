@@ -5,11 +5,9 @@ import styles from './card_edit_form.module.css';
 
 const CardEditForm = ({ card, updateCard }) => {
 	const { name, company, title, email, message, theme, fileURL } = card;
-	const onSubmit = () => {
-		console.log('onSubmit');
-	};
+	const onSubmit = () => {};
 	return (
-		<form action='' className={styles.form}>
+		<form className={styles.form}>
 			<input
 				type='text'
 				className={styles.input}

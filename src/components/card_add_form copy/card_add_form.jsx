@@ -59,11 +59,17 @@ const CardAddForm = () => {
 				name='message'
 				placeholder='Message'
 			/>
-			<div className={styles.fileInput}>
-				<ImageFileInput />
-			</div>
-			<div className={styles.button}>
-				<Button name='Add' onClick={() => onSubmit} />
+			<div>
+				<div className={styles.fileInput}>
+					<ImageFileInput />
+				</div>
+				<div className={styles.button}>
+					<Button
+						className={styles.button}
+						name='Add'
+						onClick={() => onSubmit}
+					/>
+				</div>
 			</div>
 		</form>
 	);

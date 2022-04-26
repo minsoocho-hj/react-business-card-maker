@@ -1,4 +1,4 @@
-@value makerWhite, makerGreen from '../../common/colors.css';
+@value makerWhite, makerGreen, makerLightGrey from '../../common/colors.css';
 @value mediaQuery from '../../common/size.css';
 
 .form {
@@ -8,6 +8,7 @@
 	padding: 0.5rem 2rem;
 	text-align: center;
 	overflow: scroll;
+	border-right: 1px solid makerLightGrey;
 }
 
 .title {

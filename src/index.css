@@ -13,9 +13,6 @@ code {
 }
 
 /* reset css */
-input {
-	all: unset;
-}
 
 li {
 	list-style: none;

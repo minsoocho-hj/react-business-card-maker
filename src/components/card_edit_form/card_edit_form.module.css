@@ -10,7 +10,7 @@
 .input,
 .textarea,
 .select,
-.img_input,
+.fileInput,
 .button {
 	font-size: 0.8rem;
 	width: 100%;
