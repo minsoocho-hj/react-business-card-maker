@@ -4,7 +4,8 @@ import Button from '../button/button';
 import ImageFileInput from '../image_file_input/image_file_input';
 import styles from './card_add_form.module.css';
 
-const CardAddForm = () => {
+const CardAddForm = ({ onAdd }) => {
+	const formRef = useRef();
 	const nameRef = useRef();
 	const companyRef = useRef();
 	const themeRef = useRef();
@@ -12,9 +13,25 @@ const CardAddForm = () => {
 	const emailRef = useRef();
 	const messageRef = useRef();
 
-	const onSubmit = () => {};
+	const onSubmit = (e) => {
+		e.preventDefault();
+		const card = {
+			id: Date.now(), //uuid
+			name: nameRef.current.value || '',
+			company: companyRef.current.value || '',
+			theme: themeRef.current.value,
+			title: titleRef.current.value || '',
+			email: emailRef.current.value || '',
+			message: messageRef.current.value || '',
+			fileName: '',
+			fileURL: '',
+		};
+		formRef.current.reset();
+		onAdd(card);
+	};
+
 	return (
-		<form action='' className={styles.form}>
+		<form ref={formRef} action='' className={styles.form}>
 			<input
 				ref={nameRef}
 				type='text'
@@ -59,17 +76,12 @@ const CardAddForm = () => {
 				name='message'
 				placeholder='Message'
 			/>
-			<div>
-				<div className={styles.fileInput}>
-					<ImageFileInput />
-				</div>
-				<div className={styles.button}>
-					<Button
-						className={styles.button}
-						name='Add'
-						onClick={() => onSubmit}
-					/>
-				</div>
+
+			<div className={styles.fileInput}>
+				<ImageFileInput />
+			</div>
+			<div className={styles.button}>
+				<Button className={styles.button} name='Add' onClick={onSubmit} />
 			</div>
 		</form>
 	);

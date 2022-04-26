@@ -44,11 +44,6 @@ const Maker = ({ authService }) => {
 		},
 	]);
 
-	const updateCard = (info) => {
-		setCards(info);
-		console.log('update!');
-	};
-
 	const onLogout = () => {
 		authService.logout();
 	};
@@ -62,11 +57,19 @@ const Maker = ({ authService }) => {
 		});
 	});
 
+	const addCard = (card) => {
+		const updatedCard = [...cards, card];
+		setCards(updatedCard);
+		console.log(card);
+		console.log(updatedCard);
+		console.log('update!');
+	};
+
 	return (
 		<section className={styles.maker}>
 			<Header onLogout={onLogout} />
 			<div className={styles.container}>
-				<CardForm cards={cards} updateCard={updateCard} />
+				<CardForm cards={cards} addCard={addCard} />
 				<Preview cards={cards} />
 			</div>
 			<Footer />
