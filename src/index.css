@@ -13,6 +13,9 @@ code {
 }
 
 /* reset css */
+ul {
+	padding-left: 0;
+}
 
 li {
 	list-style: none;

@@ -1,3 +1,5 @@
+@value makerBlack from '../../common/colors.css';
+
 .form {
 	display: flex;
 	flex-wrap: wrap;
