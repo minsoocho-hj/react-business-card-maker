@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import CardForm from '../cardform/cardForm';
 import Preview from '../preview/preview';
 
-const Maker = ({ authService }) => {
+const Maker = ({ FileInput, authService }) => {
 	const history = useNavigate();
 	const [cards, setCards] = useState({
 		1: {
@@ -18,7 +18,7 @@ const Maker = ({ authService }) => {
 			message: 'Go for it!',
 			theme: 'dark',
 			fileName: 'minsoo',
-			fileURL: 'default_lgo.png',
+			fileURL: 'default_logo.png',
 		},
 		2: {
 			id: 2,
@@ -77,6 +77,7 @@ const Maker = ({ authService }) => {
 			<Header onLogout={onLogout} />
 			<div className={styles.container}>
 				<CardForm
+					FileInput={FileInput}
 					cards={cards}
 					addCard={createOrUpdateCard}
 					updateCard={createOrUpdateCard}

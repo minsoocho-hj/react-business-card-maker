@@ -1,10 +1,10 @@
 import React from 'react';
 import { useRef } from 'react';
 import Button from '../button/button';
-import ImageFileInput from '../image_file_input/image_file_input';
 import styles from './card_edit_form.module.css';
+// import FileInput from './services/image_uploader';
 
-const CardEditForm = ({ card, updateCard, deleteCard }) => {
+const CardEditForm = ({ FileInput, card, updateCard, deleteCard }) => {
 	const { name, company, title, email, message, theme, fileName, fileURL } =
 		card;
 	const nameRef = useRef();
@@ -13,6 +13,15 @@ const CardEditForm = ({ card, updateCard, deleteCard }) => {
 	const titleRef = useRef();
 	const emailRef = useRef();
 	const messageRef = useRef();
+
+	const onFileChange = (file) => {
+		updateCard({
+			...card,
+			fileName: file.name,
+			fileURL: file.url,
+		});
+	};
+
 	const onChange = (e) => {
 		if (e.currentTarget == null) {
 			return;
@@ -30,56 +39,55 @@ const CardEditForm = ({ card, updateCard, deleteCard }) => {
 			<input
 				ref={nameRef}
 				type='text'
+				name='name'
 				className={styles.input}
-				placeholder='Name'
-				defaultValue={name}
+				value={name}
 				onChange={onChange}
 			/>
 			<input
 				type='text'
+				name='company'
 				ref={companyRef}
 				className={styles.input}
-				placeholder='Company'
-				defaultValue={company}
+				value={company}
 				onChange={onChange}
 			/>
 			<select
 				className={styles.select}
 				name='theme'
 				ref={themeRef}
-				defaultValue={theme}
+				value={theme}
 				onChange={onChange}
 			>
-				<option defaultValue='dark'>dark</option>
-				<option defaultValue='light'>light</option>
-				<option defaultValue='pink'>pink</option>
+				<option value='dark'>dark</option>
+				<option value='light'>light</option>
+				<option value='pink'>pink</option>
 			</select>
 			<input
 				type='text'
+				name='title'
 				ref={titleRef}
 				className={styles.input}
-				placeholder='Title'
-				defaultValue={title}
+				value={title}
 				onChange={onChange}
 			/>
 			<input
 				type='email'
 				ref={emailRef}
+				name='email'
 				className={styles.input}
-				placeholder='email'
-				defaultValue={email}
+				value={email}
 				onChange={onChange}
 			/>
 			<textarea
 				className={styles.textarea}
 				ref={messageRef}
 				name='message'
-				placeholder='Message'
-				defaultValue={message}
+				value={message}
 				onChange={onChange}
 			/>
 			<div className={styles.fileInput}>
-				<ImageFileInput />
+				<FileInput name={fileName} onFileChange={onFileChange} />
 			</div>
 			<div className={styles.button}>
 				<Button name='Delete' onClick={onSubmit} />
